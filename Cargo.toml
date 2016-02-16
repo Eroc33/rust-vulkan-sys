@@ -4,3 +4,4 @@ version = "0.1.0"
 authors = ["Euan Rochester <euan@rochester.me.uk>"]
 
 [dependencies]
+libc = "^0.2.7"
