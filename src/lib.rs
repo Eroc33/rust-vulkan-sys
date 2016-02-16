@@ -8,7 +8,7 @@ extern crate libc;
 use libc::{size_t,
     int32_t,
     uint8_t, uint32_t, uint64_t,
-    c_void,
+    c_void, c_char, c_float
 };
 
 pub type VkFlags = uint32_t;
@@ -1287,9 +1287,9 @@ pub type PFN_vkVoidFunction = ::std::option::Option<extern "C" fn()>;
 pub struct Struct_VkApplicationInfo {
     pub sType: VkStructureType,
     pub pNext: *const c_void,
-    pub pApplicationName: *const ::std::os::raw::c_char,
+    pub pApplicationName: *const c_char,
     pub applicationVersion: uint32_t,
-    pub pEngineName: *const ::std::os::raw::c_char,
+    pub pEngineName: *const c_char,
     pub engineVersion: uint32_t,
     pub apiVersion: uint32_t,
 }
@@ -1308,9 +1308,9 @@ pub struct Struct_VkInstanceCreateInfo {
     pub flags: VkInstanceCreateFlags,
     pub pApplicationInfo: *const VkApplicationInfo,
     pub enabledLayerCount: uint32_t,
-    pub ppEnabledLayerNames: *const *const ::std::os::raw::c_char,
+    pub ppEnabledLayerNames: *const *const c_char,
     pub enabledExtensionCount: uint32_t,
-    pub ppEnabledExtensionNames: *const *const ::std::os::raw::c_char,
+    pub ppEnabledExtensionNames: *const *const c_char,
 }
 impl ::std::clone::Clone for Struct_VkInstanceCreateInfo {
     fn clone(&self) -> Self { *self }
@@ -1509,11 +1509,11 @@ pub struct Struct_VkPhysicalDeviceLimits {
     pub mipmapPrecisionBits: uint32_t,
     pub maxDrawIndexedIndexValue: uint32_t,
     pub maxDrawIndirectCount: uint32_t,
-    pub maxSamplerLodBias: ::std::os::raw::c_float,
-    pub maxSamplerAnisotropy: ::std::os::raw::c_float,
+    pub maxSamplerLodBias: c_float,
+    pub maxSamplerAnisotropy: c_float,
     pub maxViewports: uint32_t,
     pub maxViewportDimensions: [uint32_t; 2usize],
-    pub viewportBoundsRange: [::std::os::raw::c_float; 2usize],
+    pub viewportBoundsRange: [c_float; 2usize],
     pub viewportSubPixelBits: uint32_t,
     pub minMemoryMapAlignment: size_t,
     pub minTexelBufferOffsetAlignment: VkDeviceSize,
@@ -1523,8 +1523,8 @@ pub struct Struct_VkPhysicalDeviceLimits {
     pub maxTexelOffset: uint32_t,
     pub minTexelGatherOffset: int32_t,
     pub maxTexelGatherOffset: uint32_t,
-    pub minInterpolationOffset: ::std::os::raw::c_float,
-    pub maxInterpolationOffset: ::std::os::raw::c_float,
+    pub minInterpolationOffset: c_float,
+    pub maxInterpolationOffset: c_float,
     pub subPixelInterpolationOffsetBits: uint32_t,
     pub maxFramebufferWidth: uint32_t,
     pub maxFramebufferHeight: uint32_t,
@@ -1541,15 +1541,15 @@ pub struct Struct_VkPhysicalDeviceLimits {
     pub storageImageSampleCounts: VkSampleCountFlags,
     pub maxSampleMaskWords: uint32_t,
     pub timestampComputeAndGraphics: VkBool32,
-    pub timestampPeriod: ::std::os::raw::c_float,
+    pub timestampPeriod: c_float,
     pub maxClipDistances: uint32_t,
     pub maxCullDistances: uint32_t,
     pub maxCombinedClipAndCullDistances: uint32_t,
     pub discreteQueuePriorities: uint32_t,
-    pub pointSizeRange: [::std::os::raw::c_float; 2usize],
-    pub lineWidthRange: [::std::os::raw::c_float; 2usize],
-    pub pointSizeGranularity: ::std::os::raw::c_float,
-    pub lineWidthGranularity: ::std::os::raw::c_float,
+    pub pointSizeRange: [c_float; 2usize],
+    pub lineWidthRange: [c_float; 2usize],
+    pub pointSizeGranularity: c_float,
+    pub lineWidthGranularity: c_float,
     pub strictLines: VkBool32,
     pub standardSampleLocations: VkBool32,
     pub optimalBufferCopyOffsetAlignment: VkDeviceSize,
@@ -1588,7 +1588,7 @@ pub struct Struct_VkPhysicalDeviceProperties {
     pub vendorID: uint32_t,
     pub deviceID: uint32_t,
     pub deviceType: VkPhysicalDeviceType,
-    pub deviceName: [::std::os::raw::c_char; 256usize],
+    pub deviceName: [c_char; 256usize],
     pub pipelineCacheUUID: [uint8_t; 16usize],
     pub limits: VkPhysicalDeviceLimits,
     pub sparseProperties: VkPhysicalDeviceSparseProperties,
@@ -1665,7 +1665,7 @@ pub struct Struct_VkDeviceQueueCreateInfo {
     pub flags: VkDeviceQueueCreateFlags,
     pub queueFamilyIndex: uint32_t,
     pub queueCount: uint32_t,
-    pub pQueuePriorities: *const ::std::os::raw::c_float,
+    pub pQueuePriorities: *const c_float,
 }
 impl ::std::clone::Clone for Struct_VkDeviceQueueCreateInfo {
     fn clone(&self) -> Self { *self }
@@ -1683,9 +1683,9 @@ pub struct Struct_VkDeviceCreateInfo {
     pub queueCreateInfoCount: uint32_t,
     pub pQueueCreateInfos: *const VkDeviceQueueCreateInfo,
     pub enabledLayerCount: uint32_t,
-    pub ppEnabledLayerNames: *const *const ::std::os::raw::c_char,
+    pub ppEnabledLayerNames: *const *const c_char,
     pub enabledExtensionCount: uint32_t,
-    pub ppEnabledExtensionNames: *const *const ::std::os::raw::c_char,
+    pub ppEnabledExtensionNames: *const *const c_char,
     pub pEnabledFeatures: *const VkPhysicalDeviceFeatures,
 }
 impl ::std::clone::Clone for Struct_VkDeviceCreateInfo {
@@ -1698,7 +1698,7 @@ pub type VkDeviceCreateInfo = Struct_VkDeviceCreateInfo;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_VkExtensionProperties {
-    pub extensionName: [::std::os::raw::c_char; 256usize],
+    pub extensionName: [c_char; 256usize],
     pub specVersion: uint32_t,
 }
 impl ::std::clone::Clone for Struct_VkExtensionProperties {
@@ -1711,10 +1711,10 @@ pub type VkExtensionProperties = Struct_VkExtensionProperties;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_VkLayerProperties {
-    pub layerName: [::std::os::raw::c_char; 256usize],
+    pub layerName: [c_char; 256usize],
     pub specVersion: uint32_t,
     pub implementationVersion: uint32_t,
-    pub description: [::std::os::raw::c_char; 256usize],
+    pub description: [c_char; 256usize],
 }
 impl ::std::clone::Clone for Struct_VkLayerProperties {
     fn clone(&self) -> Self { *self }
@@ -2203,7 +2203,7 @@ pub struct Struct_VkPipelineShaderStageCreateInfo {
     pub flags: VkPipelineShaderStageCreateFlags,
     pub stage: VkShaderStageFlagBits,
     pub module: VkShaderModule,
-    pub pName: *const ::std::os::raw::c_char,
+    pub pName: *const c_char,
     pub pSpecializationInfo: *const VkSpecializationInfo,
 }
 impl ::std::clone::Clone for Struct_VkPipelineShaderStageCreateInfo {
@@ -2302,12 +2302,12 @@ pub type VkPipelineTessellationStateCreateInfo =
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_VkViewport {
-    pub x: ::std::os::raw::c_float,
-    pub y: ::std::os::raw::c_float,
-    pub width: ::std::os::raw::c_float,
-    pub height: ::std::os::raw::c_float,
-    pub minDepth: ::std::os::raw::c_float,
-    pub maxDepth: ::std::os::raw::c_float,
+    pub x: c_float,
+    pub y: c_float,
+    pub width: c_float,
+    pub height: c_float,
+    pub minDepth: c_float,
+    pub maxDepth: c_float,
 }
 impl ::std::clone::Clone for Struct_VkViewport {
     fn clone(&self) -> Self { *self }
@@ -2386,10 +2386,10 @@ pub struct Struct_VkPipelineRasterizationStateCreateInfo {
     pub cullMode: VkCullModeFlags,
     pub frontFace: VkFrontFace,
     pub depthBiasEnable: VkBool32,
-    pub depthBiasConstantFactor: ::std::os::raw::c_float,
-    pub depthBiasClamp: ::std::os::raw::c_float,
-    pub depthBiasSlopeFactor: ::std::os::raw::c_float,
-    pub lineWidth: ::std::os::raw::c_float,
+    pub depthBiasConstantFactor: c_float,
+    pub depthBiasClamp: c_float,
+    pub depthBiasSlopeFactor: c_float,
+    pub lineWidth: c_float,
 }
 impl ::std::clone::Clone for Struct_VkPipelineRasterizationStateCreateInfo {
     fn clone(&self) -> Self { *self }
@@ -2408,7 +2408,7 @@ pub struct Struct_VkPipelineMultisampleStateCreateInfo {
     pub flags: VkPipelineMultisampleStateCreateFlags,
     pub rasterizationSamples: VkSampleCountFlagBits,
     pub sampleShadingEnable: VkBool32,
-    pub minSampleShading: ::std::os::raw::c_float,
+    pub minSampleShading: c_float,
     pub pSampleMask: *const VkSampleMask,
     pub alphaToCoverageEnable: VkBool32,
     pub alphaToOneEnable: VkBool32,
@@ -2452,8 +2452,8 @@ pub struct Struct_VkPipelineDepthStencilStateCreateInfo {
     pub stencilTestEnable: VkBool32,
     pub front: VkStencilOpState,
     pub back: VkStencilOpState,
-    pub minDepthBounds: ::std::os::raw::c_float,
-    pub maxDepthBounds: ::std::os::raw::c_float,
+    pub minDepthBounds: c_float,
+    pub maxDepthBounds: c_float,
 }
 impl ::std::clone::Clone for Struct_VkPipelineDepthStencilStateCreateInfo {
     fn clone(&self) -> Self { *self }
@@ -2494,7 +2494,7 @@ pub struct Struct_VkPipelineColorBlendStateCreateInfo {
     pub logicOp: VkLogicOp,
     pub attachmentCount: uint32_t,
     pub pAttachments: *const VkPipelineColorBlendAttachmentState,
-    pub blendConstants: [::std::os::raw::c_float; 4usize],
+    pub blendConstants: [c_float; 4usize],
 }
 impl ::std::clone::Clone for Struct_VkPipelineColorBlendStateCreateInfo {
     fn clone(&self) -> Self { *self }
@@ -2613,13 +2613,13 @@ pub struct Struct_VkSamplerCreateInfo {
     pub addressModeU: VkSamplerAddressMode,
     pub addressModeV: VkSamplerAddressMode,
     pub addressModeW: VkSamplerAddressMode,
-    pub mipLodBias: ::std::os::raw::c_float,
+    pub mipLodBias: c_float,
     pub anisotropyEnable: VkBool32,
-    pub maxAnisotropy: ::std::os::raw::c_float,
+    pub maxAnisotropy: c_float,
     pub compareEnable: VkBool32,
     pub compareOp: VkCompareOp,
-    pub minLod: ::std::os::raw::c_float,
-    pub maxLod: ::std::os::raw::c_float,
+    pub minLod: c_float,
+    pub maxLod: c_float,
     pub borderColor: VkBorderColor,
     pub unnormalizedCoordinates: VkBool32,
 }
@@ -3040,7 +3040,7 @@ pub struct Union_VkClearColorValue {
 }
 impl Union_VkClearColorValue {
     pub unsafe fn float32(&mut self)
-     -> *mut [::std::os::raw::c_float; 4usize] {
+     -> *mut [c_float; 4usize] {
         let raw: *mut u8 = ::std::mem::transmute(&self._bindgen_data_);
         ::std::mem::transmute(raw.offset(0))
     }
@@ -3063,7 +3063,7 @@ pub type VkClearColorValue = Union_VkClearColorValue;
 #[repr(C)]
 #[derive(Copy)]
 pub struct Struct_VkClearDepthStencilValue {
-    pub depth: ::std::os::raw::c_float,
+    pub depth: c_float,
     pub stencil: uint32_t,
 }
 impl ::std::clone::Clone for Struct_VkClearDepthStencilValue {
@@ -3318,12 +3318,12 @@ pub type PFN_vkGetPhysicalDeviceMemoryProperties =
 pub type PFN_vkGetInstanceProcAddr =
     ::std::option::Option<unsafe extern "C" fn(instance: VkInstance,
                                                pName:
-                                                   *const ::std::os::raw::c_char)
+                                                   *const c_char)
                               -> PFN_vkVoidFunction>;
 pub type PFN_vkGetDeviceProcAddr =
     ::std::option::Option<unsafe extern "C" fn(device: VkDevice,
                                                pName:
-                                                   *const ::std::os::raw::c_char)
+                                                   *const c_char)
                               -> PFN_vkVoidFunction>;
 pub type PFN_vkCreateDevice =
     ::std::option::Option<unsafe extern "C" fn(physicalDevice:
@@ -3340,7 +3340,7 @@ pub type PFN_vkDestroyDevice =
                                                    *const VkAllocationCallbacks)>;
 pub type PFN_vkEnumerateInstanceExtensionProperties =
     ::std::option::Option<unsafe extern "C" fn(pLayerName:
-                                                   *const ::std::os::raw::c_char,
+                                                   *const c_char,
                                                pPropertyCount: *mut uint32_t,
                                                pProperties:
                                                    *mut VkExtensionProperties)
@@ -3349,7 +3349,7 @@ pub type PFN_vkEnumerateDeviceExtensionProperties =
     ::std::option::Option<unsafe extern "C" fn(physicalDevice:
                                                    VkPhysicalDevice,
                                                pLayerName:
-                                                   *const ::std::os::raw::c_char,
+                                                   *const c_char,
                                                pPropertyCount: *mut uint32_t,
                                                pProperties:
                                                    *mut VkExtensionProperties)
@@ -3859,25 +3859,25 @@ pub type PFN_vkCmdSetScissor =
                                                pScissors: *const VkRect2D)>;
 pub type PFN_vkCmdSetLineWidth =
     ::std::option::Option<extern "C" fn(commandBuffer: VkCommandBuffer,
-                                        lineWidth: ::std::os::raw::c_float)>;
+                                        lineWidth: c_float)>;
 pub type PFN_vkCmdSetDepthBias =
     ::std::option::Option<extern "C" fn(commandBuffer: VkCommandBuffer,
                                         depthBiasConstantFactor:
-                                            ::std::os::raw::c_float,
+                                            c_float,
                                         depthBiasClamp:
-                                            ::std::os::raw::c_float,
+                                            c_float,
                                         depthBiasSlopeFactor:
-                                            ::std::os::raw::c_float)>;
+                                            c_float)>;
 pub type PFN_vkCmdSetBlendConstants =
     ::std::option::Option<extern "C" fn(commandBuffer: VkCommandBuffer,
                                         blendConstants:
-                                            *mut ::std::os::raw::c_float)>;
+                                            *mut c_float)>;
 pub type PFN_vkCmdSetDepthBounds =
     ::std::option::Option<extern "C" fn(commandBuffer: VkCommandBuffer,
                                         minDepthBounds:
-                                            ::std::os::raw::c_float,
+                                            c_float,
                                         maxDepthBounds:
-                                            ::std::os::raw::c_float)>;
+                                            c_float)>;
 pub type PFN_vkCmdSetStencilCompareMask =
     ::std::option::Option<extern "C" fn(commandBuffer: VkCommandBuffer,
                                         faceMask: VkStencilFaceFlags,
@@ -4360,7 +4360,7 @@ pub type VkDisplaySurfaceCreateFlagsKHR = VkFlags;
 #[derive(Copy)]
 pub struct Struct_VkDisplayPropertiesKHR {
     pub display: VkDisplayKHR,
-    pub displayName: *const ::std::os::raw::c_char,
+    pub displayName: *const c_char,
     pub physicalDimensions: VkExtent2D,
     pub physicalResolution: VkExtent2D,
     pub supportedTransforms: VkSurfaceTransformFlagsKHR,
@@ -4458,7 +4458,7 @@ pub struct Struct_VkDisplaySurfaceCreateInfoKHR {
     pub planeIndex: uint32_t,
     pub planeStackIndex: uint32_t,
     pub transform: VkSurfaceTransformFlagBitsKHR,
-    pub globalAlpha: ::std::os::raw::c_float,
+    pub globalAlpha: c_float,
     pub alphaMode: VkDisplayPlaneAlphaFlagBitsKHR,
     pub imageExtent: VkExtent2D,
 }
@@ -4612,9 +4612,9 @@ pub type PFN_vkDebugReportCallbackEXT =
                                                location: size_t,
                                                messageCode: int32_t,
                                                pLayerPrefix:
-                                                   *const ::std::os::raw::c_char,
+                                                   *const c_char,
                                                pMessage:
-                                                   *const ::std::os::raw::c_char,
+                                                   *const c_char,
                                                pUserData:
                                                    *mut c_void)
                               -> VkBool32>;
@@ -4659,9 +4659,9 @@ pub type PFN_vkDebugReportMessageEXT =
                                                location: size_t,
                                                messageCode: int32_t,
                                                pLayerPrefix:
-                                                   *const ::std::os::raw::c_char,
+                                                   *const c_char,
                                                pMessage:
-                                                   *const ::std::os::raw::c_char)>;
+                                                   *const c_char)>;
 extern "C" {
     pub fn vkCreateInstance(pCreateInfo: *const VkInstanceCreateInfo,
                             pAllocator: *const VkAllocationCallbacks,
@@ -4704,10 +4704,10 @@ extern "C" {
                                                pMemoryProperties:
                                                    *mut VkPhysicalDeviceMemoryProperties);
     pub fn vkGetInstanceProcAddr(instance: VkInstance,
-                                 pName: *const ::std::os::raw::c_char)
+                                 pName: *const c_char)
      -> PFN_vkVoidFunction;
     pub fn vkGetDeviceProcAddr(device: VkDevice,
-                               pName: *const ::std::os::raw::c_char)
+                               pName: *const c_char)
      -> PFN_vkVoidFunction;
     pub fn vkCreateDevice(physicalDevice: VkPhysicalDevice,
                           pCreateInfo: *const VkDeviceCreateInfo,
@@ -4716,7 +4716,7 @@ extern "C" {
     pub fn vkDestroyDevice(device: VkDevice,
                            pAllocator: *const VkAllocationCallbacks);
     pub fn vkEnumerateInstanceExtensionProperties(pLayerName:
-                                                      *const ::std::os::raw::c_char,
+                                                      *const c_char,
                                                   pPropertyCount:
                                                       *mut uint32_t,
                                                   pProperties:
@@ -4725,7 +4725,7 @@ extern "C" {
     pub fn vkEnumerateDeviceExtensionProperties(physicalDevice:
                                                     VkPhysicalDevice,
                                                 pLayerName:
-                                                    *const ::std::os::raw::c_char,
+                                                    *const c_char,
                                                 pPropertyCount: *mut uint32_t,
                                                 pProperties:
                                                     *mut VkExtensionProperties)
@@ -5019,17 +5019,17 @@ extern "C" {
                            firstScissor: uint32_t, scissorCount: uint32_t,
                            pScissors: *const VkRect2D);
     pub fn vkCmdSetLineWidth(commandBuffer: VkCommandBuffer,
-                             lineWidth: ::std::os::raw::c_float);
+                             lineWidth: c_float);
     pub fn vkCmdSetDepthBias(commandBuffer: VkCommandBuffer,
-                             depthBiasConstantFactor: ::std::os::raw::c_float,
-                             depthBiasClamp: ::std::os::raw::c_float,
-                             depthBiasSlopeFactor: ::std::os::raw::c_float);
+                             depthBiasConstantFactor: c_float,
+                             depthBiasClamp: c_float,
+                             depthBiasSlopeFactor: c_float);
     pub fn vkCmdSetBlendConstants(commandBuffer: VkCommandBuffer,
                                   blendConstants:
-                                      *mut ::std::os::raw::c_float);
+                                      *mut c_float);
     pub fn vkCmdSetDepthBounds(commandBuffer: VkCommandBuffer,
-                               minDepthBounds: ::std::os::raw::c_float,
-                               maxDepthBounds: ::std::os::raw::c_float);
+                               minDepthBounds: c_float,
+                               maxDepthBounds: c_float);
     pub fn vkCmdSetStencilCompareMask(commandBuffer: VkCommandBuffer,
                                       faceMask: VkStencilFaceFlags,
                                       compareMask: uint32_t);
@@ -5305,6 +5305,6 @@ extern "C" {
                                    object: uint64_t, location: size_t,
                                    messageCode: int32_t,
                                    pLayerPrefix:
-                                       *const ::std::os::raw::c_char,
-                                   pMessage: *const ::std::os::raw::c_char);
+                                       *const c_char,
+                                   pMessage: *const c_char);
 }
