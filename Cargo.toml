@@ -1,0 +1,6 @@
+[package]
+name = "vulkan-sys"
+version = "0.1.0"
+authors = ["Euan Rochester <euan@rochester.me.uk>"]
+
+[dependencies]
