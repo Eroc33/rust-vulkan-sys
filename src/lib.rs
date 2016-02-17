@@ -4662,6 +4662,8 @@ pub type PFN_vkDebugReportMessageEXT =
                                                    *const c_char,
                                                pMessage:
                                                    *const c_char)>;
+
+#[link(name="vulkan-1", kind="static")]
 extern "C" {
     pub fn vkCreateInstance(pCreateInfo: *const VkInstanceCreateInfo,
                             pAllocator: *const VkAllocationCallbacks,

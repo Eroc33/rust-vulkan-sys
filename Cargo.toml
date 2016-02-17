@@ -2,6 +2,8 @@
 name = "vulkan-sys"
 version = "0.1.0"
 authors = ["Euan Rochester <euan@rochester.me.uk>"]
+links = "vulkan-1"
+build = "build.rs"
 
 [dependencies]
 libc = "^0.2.7"
