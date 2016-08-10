@@ -66,21 +66,20 @@ pub type VkFramebuffer = *mut Struct_VkFramebuffer_T;
 pub enum Struct_VkCommandPool_T { }
 pub type VkCommandPool = *mut Struct_VkCommandPool_T;
 pub const VK_PIPELINE_CACHE_HEADER_VERSION_BEGIN_RANGE:
-          Enum_VkPipelineCacheHeaderVersion =
-    Enum_VkPipelineCacheHeaderVersion::VK_PIPELINE_CACHE_HEADER_VERSION_ONE;
+          VkPipelineCacheHeaderVersion =
+    VkPipelineCacheHeaderVersion::VK_PIPELINE_CACHE_HEADER_VERSION_ONE;
 pub const VK_PIPELINE_CACHE_HEADER_VERSION_END_RANGE:
-          Enum_VkPipelineCacheHeaderVersion =
-    Enum_VkPipelineCacheHeaderVersion::VK_PIPELINE_CACHE_HEADER_VERSION_ONE;
+          VkPipelineCacheHeaderVersion =
+    VkPipelineCacheHeaderVersion::VK_PIPELINE_CACHE_HEADER_VERSION_ONE;
 pub const VK_PIPELINE_CACHE_HEADER_VERSION_RANGE_SIZE:
-          Enum_VkPipelineCacheHeaderVersion =
-    Enum_VkPipelineCacheHeaderVersion::VK_PIPELINE_CACHE_HEADER_VERSION_ONE;
+          VkPipelineCacheHeaderVersion =
+    VkPipelineCacheHeaderVersion::VK_PIPELINE_CACHE_HEADER_VERSION_ONE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPipelineCacheHeaderVersion {
+pub enum VkPipelineCacheHeaderVersion {
     VK_PIPELINE_CACHE_HEADER_VERSION_ONE = 1,
     VK_PIPELINE_CACHE_HEADER_VERSION_MAX_ENUM = 2147483647,
 }
-pub type VkPipelineCacheHeaderVersion = Enum_VkPipelineCacheHeaderVersion;
 pub const VK_RESULT_BEGIN_RANGE: VkResult =
     VkResult::VK_ERROR_FORMAT_NOT_SUPPORTED;
 pub const VK_RESULT_END_RANGE: VkResult = VkResult::VK_INCOMPLETE;
@@ -184,14 +183,14 @@ pub enum VkStructureType {
     VK_STRUCTURE_TYPE_RANGE_SIZE = 49,
     VK_STRUCTURE_TYPE_MAX_ENUM = 2147483647,
 }
-pub const VK_SYSTEM_ALLOCATION_SCOPE_BEGIN_RANGE: Enum_VkSystemAllocationScope
+pub const VK_SYSTEM_ALLOCATION_SCOPE_BEGIN_RANGE: VkSystemAllocationScope
           =
-    Enum_VkSystemAllocationScope::VK_SYSTEM_ALLOCATION_SCOPE_COMMAND;
-pub const VK_SYSTEM_ALLOCATION_SCOPE_END_RANGE: Enum_VkSystemAllocationScope =
-    Enum_VkSystemAllocationScope::VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE;
+    VkSystemAllocationScope::VK_SYSTEM_ALLOCATION_SCOPE_COMMAND;
+pub const VK_SYSTEM_ALLOCATION_SCOPE_END_RANGE: VkSystemAllocationScope =
+    VkSystemAllocationScope::VK_SYSTEM_ALLOCATION_SCOPE_INSTANCE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSystemAllocationScope {
+pub enum VkSystemAllocationScope {
     VK_SYSTEM_ALLOCATION_SCOPE_COMMAND = 0,
     VK_SYSTEM_ALLOCATION_SCOPE_OBJECT = 1,
     VK_SYSTEM_ALLOCATION_SCOPE_CACHE = 2,
@@ -200,28 +199,26 @@ pub enum Enum_VkSystemAllocationScope {
     VK_SYSTEM_ALLOCATION_SCOPE_RANGE_SIZE = 5,
     VK_SYSTEM_ALLOCATION_SCOPE_MAX_ENUM = 2147483647,
 }
-pub type VkSystemAllocationScope = Enum_VkSystemAllocationScope;
 pub const VK_INTERNAL_ALLOCATION_TYPE_BEGIN_RANGE:
-          Enum_VkInternalAllocationType =
-    Enum_VkInternalAllocationType::VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE;
-pub const VK_INTERNAL_ALLOCATION_TYPE_END_RANGE: Enum_VkInternalAllocationType
+          VkInternalAllocationType =
+    VkInternalAllocationType::VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE;
+pub const VK_INTERNAL_ALLOCATION_TYPE_END_RANGE: VkInternalAllocationType
           =
-    Enum_VkInternalAllocationType::VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE;
+    VkInternalAllocationType::VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkInternalAllocationType {
+pub enum VkInternalAllocationType {
     VK_INTERNAL_ALLOCATION_TYPE_EXECUTABLE = 0,
     VK_INTERNAL_ALLOCATION_TYPE_RANGE_SIZE = 1,
     VK_INTERNAL_ALLOCATION_TYPE_MAX_ENUM = 2147483647,
 }
-pub type VkInternalAllocationType = Enum_VkInternalAllocationType;
-pub const VK_FORMAT_BEGIN_RANGE: Enum_VkFormat =
-    Enum_VkFormat::VK_FORMAT_UNDEFINED;
-pub const VK_FORMAT_END_RANGE: Enum_VkFormat =
-    Enum_VkFormat::VK_FORMAT_ASTC_12x12_SRGB_BLOCK;
+pub const VK_FORMAT_BEGIN_RANGE: VkFormat =
+    VkFormat::VK_FORMAT_UNDEFINED;
+pub const VK_FORMAT_END_RANGE: VkFormat =
+    VkFormat::VK_FORMAT_ASTC_12x12_SRGB_BLOCK;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkFormat {
+pub enum VkFormat {
     VK_FORMAT_UNDEFINED = 0,
     VK_FORMAT_R4G4_UNORM_PACK8 = 1,
     VK_FORMAT_R4G4B4A4_UNORM_PACK16 = 2,
@@ -410,41 +407,38 @@ pub enum Enum_VkFormat {
     VK_FORMAT_RANGE_SIZE = 185,
     VK_FORMAT_MAX_ENUM = 2147483647,
 }
-pub type VkFormat = Enum_VkFormat;
-pub const VK_IMAGE_TYPE_BEGIN_RANGE: Enum_VkImageType =
-    Enum_VkImageType::VK_IMAGE_TYPE_1D;
-pub const VK_IMAGE_TYPE_END_RANGE: Enum_VkImageType =
-    Enum_VkImageType::VK_IMAGE_TYPE_3D;
+pub const VK_IMAGE_TYPE_BEGIN_RANGE: VkImageType =
+    VkImageType::VK_IMAGE_TYPE_1D;
+pub const VK_IMAGE_TYPE_END_RANGE: VkImageType =
+    VkImageType::VK_IMAGE_TYPE_3D;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkImageType {
+pub enum VkImageType {
     VK_IMAGE_TYPE_1D = 0,
     VK_IMAGE_TYPE_2D = 1,
     VK_IMAGE_TYPE_3D = 2,
     VK_IMAGE_TYPE_RANGE_SIZE = 3,
     VK_IMAGE_TYPE_MAX_ENUM = 2147483647,
 }
-pub type VkImageType = Enum_VkImageType;
-pub const VK_IMAGE_TILING_BEGIN_RANGE: Enum_VkImageTiling =
-    Enum_VkImageTiling::VK_IMAGE_TILING_OPTIMAL;
-pub const VK_IMAGE_TILING_END_RANGE: Enum_VkImageTiling =
-    Enum_VkImageTiling::VK_IMAGE_TILING_LINEAR;
+pub const VK_IMAGE_TILING_BEGIN_RANGE: VkImageTiling =
+    VkImageTiling::VK_IMAGE_TILING_OPTIMAL;
+pub const VK_IMAGE_TILING_END_RANGE: VkImageTiling =
+    VkImageTiling::VK_IMAGE_TILING_LINEAR;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkImageTiling {
+pub enum VkImageTiling {
     VK_IMAGE_TILING_OPTIMAL = 0,
     VK_IMAGE_TILING_LINEAR = 1,
     VK_IMAGE_TILING_RANGE_SIZE = 2,
     VK_IMAGE_TILING_MAX_ENUM = 2147483647,
 }
-pub type VkImageTiling = Enum_VkImageTiling;
-pub const VK_PHYSICAL_DEVICE_TYPE_BEGIN_RANGE: Enum_VkPhysicalDeviceType =
-    Enum_VkPhysicalDeviceType::VK_PHYSICAL_DEVICE_TYPE_OTHER;
-pub const VK_PHYSICAL_DEVICE_TYPE_END_RANGE: Enum_VkPhysicalDeviceType =
-    Enum_VkPhysicalDeviceType::VK_PHYSICAL_DEVICE_TYPE_CPU;
+pub const VK_PHYSICAL_DEVICE_TYPE_BEGIN_RANGE: VkPhysicalDeviceType =
+    VkPhysicalDeviceType::VK_PHYSICAL_DEVICE_TYPE_OTHER;
+pub const VK_PHYSICAL_DEVICE_TYPE_END_RANGE: VkPhysicalDeviceType =
+    VkPhysicalDeviceType::VK_PHYSICAL_DEVICE_TYPE_CPU;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPhysicalDeviceType {
+pub enum VkPhysicalDeviceType {
     VK_PHYSICAL_DEVICE_TYPE_OTHER = 0,
     VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU = 1,
     VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU = 2,
@@ -453,41 +447,38 @@ pub enum Enum_VkPhysicalDeviceType {
     VK_PHYSICAL_DEVICE_TYPE_RANGE_SIZE = 5,
     VK_PHYSICAL_DEVICE_TYPE_MAX_ENUM = 2147483647,
 }
-pub type VkPhysicalDeviceType = Enum_VkPhysicalDeviceType;
-pub const VK_QUERY_TYPE_BEGIN_RANGE: Enum_VkQueryType =
-    Enum_VkQueryType::VK_QUERY_TYPE_OCCLUSION;
-pub const VK_QUERY_TYPE_END_RANGE: Enum_VkQueryType =
-    Enum_VkQueryType::VK_QUERY_TYPE_TIMESTAMP;
+pub const VK_QUERY_TYPE_BEGIN_RANGE: VkQueryType =
+    VkQueryType::VK_QUERY_TYPE_OCCLUSION;
+pub const VK_QUERY_TYPE_END_RANGE: VkQueryType =
+    VkQueryType::VK_QUERY_TYPE_TIMESTAMP;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkQueryType {
+pub enum VkQueryType {
     VK_QUERY_TYPE_OCCLUSION = 0,
     VK_QUERY_TYPE_PIPELINE_STATISTICS = 1,
     VK_QUERY_TYPE_TIMESTAMP = 2,
     VK_QUERY_TYPE_RANGE_SIZE = 3,
     VK_QUERY_TYPE_MAX_ENUM = 2147483647,
 }
-pub type VkQueryType = Enum_VkQueryType;
-pub const VK_SHARING_MODE_BEGIN_RANGE: Enum_VkSharingMode =
-    Enum_VkSharingMode::VK_SHARING_MODE_EXCLUSIVE;
-pub const VK_SHARING_MODE_END_RANGE: Enum_VkSharingMode =
-    Enum_VkSharingMode::VK_SHARING_MODE_CONCURRENT;
+pub const VK_SHARING_MODE_BEGIN_RANGE: VkSharingMode =
+    VkSharingMode::VK_SHARING_MODE_EXCLUSIVE;
+pub const VK_SHARING_MODE_END_RANGE: VkSharingMode =
+    VkSharingMode::VK_SHARING_MODE_CONCURRENT;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSharingMode {
+pub enum VkSharingMode {
     VK_SHARING_MODE_EXCLUSIVE = 0,
     VK_SHARING_MODE_CONCURRENT = 1,
     VK_SHARING_MODE_RANGE_SIZE = 2,
     VK_SHARING_MODE_MAX_ENUM = 2147483647,
 }
-pub type VkSharingMode = Enum_VkSharingMode;
-pub const VK_IMAGE_LAYOUT_BEGIN_RANGE: Enum_VkImageLayout =
-    Enum_VkImageLayout::VK_IMAGE_LAYOUT_UNDEFINED;
-pub const VK_IMAGE_LAYOUT_END_RANGE: Enum_VkImageLayout =
-    Enum_VkImageLayout::VK_IMAGE_LAYOUT_PREINITIALIZED;
+pub const VK_IMAGE_LAYOUT_BEGIN_RANGE: VkImageLayout =
+    VkImageLayout::VK_IMAGE_LAYOUT_UNDEFINED;
+pub const VK_IMAGE_LAYOUT_END_RANGE: VkImageLayout =
+    VkImageLayout::VK_IMAGE_LAYOUT_PREINITIALIZED;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkImageLayout {
+pub enum VkImageLayout {
     VK_IMAGE_LAYOUT_UNDEFINED = 0,
     VK_IMAGE_LAYOUT_GENERAL = 1,
     VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL = 2,
@@ -501,14 +492,13 @@ pub enum Enum_VkImageLayout {
     VK_IMAGE_LAYOUT_RANGE_SIZE = 9,
     VK_IMAGE_LAYOUT_MAX_ENUM = 2147483647,
 }
-pub type VkImageLayout = Enum_VkImageLayout;
-pub const VK_IMAGE_VIEW_TYPE_BEGIN_RANGE: Enum_VkImageViewType =
-    Enum_VkImageViewType::VK_IMAGE_VIEW_TYPE_1D;
-pub const VK_IMAGE_VIEW_TYPE_END_RANGE: Enum_VkImageViewType =
-    Enum_VkImageViewType::VK_IMAGE_VIEW_TYPE_CUBE_ARRAY;
+pub const VK_IMAGE_VIEW_TYPE_BEGIN_RANGE: VkImageViewType =
+    VkImageViewType::VK_IMAGE_VIEW_TYPE_1D;
+pub const VK_IMAGE_VIEW_TYPE_END_RANGE: VkImageViewType =
+    VkImageViewType::VK_IMAGE_VIEW_TYPE_CUBE_ARRAY;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkImageViewType {
+pub enum VkImageViewType {
     VK_IMAGE_VIEW_TYPE_1D = 0,
     VK_IMAGE_VIEW_TYPE_2D = 1,
     VK_IMAGE_VIEW_TYPE_3D = 2,
@@ -519,14 +509,13 @@ pub enum Enum_VkImageViewType {
     VK_IMAGE_VIEW_TYPE_RANGE_SIZE = 7,
     VK_IMAGE_VIEW_TYPE_MAX_ENUM = 2147483647,
 }
-pub type VkImageViewType = Enum_VkImageViewType;
-pub const VK_COMPONENT_SWIZZLE_BEGIN_RANGE: Enum_VkComponentSwizzle =
-    Enum_VkComponentSwizzle::VK_COMPONENT_SWIZZLE_IDENTITY;
-pub const VK_COMPONENT_SWIZZLE_END_RANGE: Enum_VkComponentSwizzle =
-    Enum_VkComponentSwizzle::VK_COMPONENT_SWIZZLE_A;
+pub const VK_COMPONENT_SWIZZLE_BEGIN_RANGE: VkComponentSwizzle =
+    VkComponentSwizzle::VK_COMPONENT_SWIZZLE_IDENTITY;
+pub const VK_COMPONENT_SWIZZLE_END_RANGE: VkComponentSwizzle =
+    VkComponentSwizzle::VK_COMPONENT_SWIZZLE_A;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkComponentSwizzle {
+pub enum VkComponentSwizzle {
     VK_COMPONENT_SWIZZLE_IDENTITY = 0,
     VK_COMPONENT_SWIZZLE_ZERO = 1,
     VK_COMPONENT_SWIZZLE_ONE = 2,
@@ -537,27 +526,25 @@ pub enum Enum_VkComponentSwizzle {
     VK_COMPONENT_SWIZZLE_RANGE_SIZE = 7,
     VK_COMPONENT_SWIZZLE_MAX_ENUM = 2147483647,
 }
-pub type VkComponentSwizzle = Enum_VkComponentSwizzle;
-pub const VK_VERTEX_INPUT_RATE_BEGIN_RANGE: Enum_VkVertexInputRate =
-    Enum_VkVertexInputRate::VK_VERTEX_INPUT_RATE_VERTEX;
-pub const VK_VERTEX_INPUT_RATE_END_RANGE: Enum_VkVertexInputRate =
-    Enum_VkVertexInputRate::VK_VERTEX_INPUT_RATE_INSTANCE;
+pub const VK_VERTEX_INPUT_RATE_BEGIN_RANGE: VkVertexInputRate =
+    VkVertexInputRate::VK_VERTEX_INPUT_RATE_VERTEX;
+pub const VK_VERTEX_INPUT_RATE_END_RANGE: VkVertexInputRate =
+    VkVertexInputRate::VK_VERTEX_INPUT_RATE_INSTANCE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkVertexInputRate {
+pub enum VkVertexInputRate {
     VK_VERTEX_INPUT_RATE_VERTEX = 0,
     VK_VERTEX_INPUT_RATE_INSTANCE = 1,
     VK_VERTEX_INPUT_RATE_RANGE_SIZE = 2,
     VK_VERTEX_INPUT_RATE_MAX_ENUM = 2147483647,
 }
-pub type VkVertexInputRate = Enum_VkVertexInputRate;
-pub const VK_PRIMITIVE_TOPOLOGY_BEGIN_RANGE: Enum_VkPrimitiveTopology =
-    Enum_VkPrimitiveTopology::VK_PRIMITIVE_TOPOLOGY_POINT_LIST;
-pub const VK_PRIMITIVE_TOPOLOGY_END_RANGE: Enum_VkPrimitiveTopology =
-    Enum_VkPrimitiveTopology::VK_PRIMITIVE_TOPOLOGY_PATCH_LIST;
+pub const VK_PRIMITIVE_TOPOLOGY_BEGIN_RANGE: VkPrimitiveTopology =
+    VkPrimitiveTopology::VK_PRIMITIVE_TOPOLOGY_POINT_LIST;
+pub const VK_PRIMITIVE_TOPOLOGY_END_RANGE: VkPrimitiveTopology =
+    VkPrimitiveTopology::VK_PRIMITIVE_TOPOLOGY_PATCH_LIST;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPrimitiveTopology {
+pub enum VkPrimitiveTopology {
     VK_PRIMITIVE_TOPOLOGY_POINT_LIST = 0,
     VK_PRIMITIVE_TOPOLOGY_LINE_LIST = 1,
     VK_PRIMITIVE_TOPOLOGY_LINE_STRIP = 2,
@@ -572,41 +559,38 @@ pub enum Enum_VkPrimitiveTopology {
     VK_PRIMITIVE_TOPOLOGY_RANGE_SIZE = 11,
     VK_PRIMITIVE_TOPOLOGY_MAX_ENUM = 2147483647,
 }
-pub type VkPrimitiveTopology = Enum_VkPrimitiveTopology;
-pub const VK_POLYGON_MODE_BEGIN_RANGE: Enum_VkPolygonMode =
-    Enum_VkPolygonMode::VK_POLYGON_MODE_FILL;
-pub const VK_POLYGON_MODE_END_RANGE: Enum_VkPolygonMode =
-    Enum_VkPolygonMode::VK_POLYGON_MODE_POINT;
+pub const VK_POLYGON_MODE_BEGIN_RANGE: VkPolygonMode =
+    VkPolygonMode::VK_POLYGON_MODE_FILL;
+pub const VK_POLYGON_MODE_END_RANGE: VkPolygonMode =
+    VkPolygonMode::VK_POLYGON_MODE_POINT;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPolygonMode {
+pub enum VkPolygonMode {
     VK_POLYGON_MODE_FILL = 0,
     VK_POLYGON_MODE_LINE = 1,
     VK_POLYGON_MODE_POINT = 2,
     VK_POLYGON_MODE_RANGE_SIZE = 3,
     VK_POLYGON_MODE_MAX_ENUM = 2147483647,
 }
-pub type VkPolygonMode = Enum_VkPolygonMode;
-pub const VK_FRONT_FACE_BEGIN_RANGE: Enum_VkFrontFace =
-    Enum_VkFrontFace::VK_FRONT_FACE_COUNTER_CLOCKWISE;
-pub const VK_FRONT_FACE_END_RANGE: Enum_VkFrontFace =
-    Enum_VkFrontFace::VK_FRONT_FACE_CLOCKWISE;
+pub const VK_FRONT_FACE_BEGIN_RANGE: VkFrontFace =
+    VkFrontFace::VK_FRONT_FACE_COUNTER_CLOCKWISE;
+pub const VK_FRONT_FACE_END_RANGE: VkFrontFace =
+    VkFrontFace::VK_FRONT_FACE_CLOCKWISE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkFrontFace {
+pub enum VkFrontFace {
     VK_FRONT_FACE_COUNTER_CLOCKWISE = 0,
     VK_FRONT_FACE_CLOCKWISE = 1,
     VK_FRONT_FACE_RANGE_SIZE = 2,
     VK_FRONT_FACE_MAX_ENUM = 2147483647,
 }
-pub type VkFrontFace = Enum_VkFrontFace;
-pub const VK_COMPARE_OP_BEGIN_RANGE: Enum_VkCompareOp =
-    Enum_VkCompareOp::VK_COMPARE_OP_NEVER;
-pub const VK_COMPARE_OP_END_RANGE: Enum_VkCompareOp =
-    Enum_VkCompareOp::VK_COMPARE_OP_ALWAYS;
+pub const VK_COMPARE_OP_BEGIN_RANGE: VkCompareOp =
+    VkCompareOp::VK_COMPARE_OP_NEVER;
+pub const VK_COMPARE_OP_END_RANGE: VkCompareOp =
+    VkCompareOp::VK_COMPARE_OP_ALWAYS;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCompareOp {
+pub enum VkCompareOp {
     VK_COMPARE_OP_NEVER = 0,
     VK_COMPARE_OP_LESS = 1,
     VK_COMPARE_OP_EQUAL = 2,
@@ -618,14 +602,13 @@ pub enum Enum_VkCompareOp {
     VK_COMPARE_OP_RANGE_SIZE = 8,
     VK_COMPARE_OP_MAX_ENUM = 2147483647,
 }
-pub type VkCompareOp = Enum_VkCompareOp;
-pub const VK_STENCIL_OP_BEGIN_RANGE: Enum_VkStencilOp =
-    Enum_VkStencilOp::VK_STENCIL_OP_KEEP;
-pub const VK_STENCIL_OP_END_RANGE: Enum_VkStencilOp =
-    Enum_VkStencilOp::VK_STENCIL_OP_DECREMENT_AND_WRAP;
+pub const VK_STENCIL_OP_BEGIN_RANGE: VkStencilOp =
+    VkStencilOp::VK_STENCIL_OP_KEEP;
+pub const VK_STENCIL_OP_END_RANGE: VkStencilOp =
+    VkStencilOp::VK_STENCIL_OP_DECREMENT_AND_WRAP;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkStencilOp {
+pub enum VkStencilOp {
     VK_STENCIL_OP_KEEP = 0,
     VK_STENCIL_OP_ZERO = 1,
     VK_STENCIL_OP_REPLACE = 2,
@@ -637,14 +620,13 @@ pub enum Enum_VkStencilOp {
     VK_STENCIL_OP_RANGE_SIZE = 8,
     VK_STENCIL_OP_MAX_ENUM = 2147483647,
 }
-pub type VkStencilOp = Enum_VkStencilOp;
-pub const VK_LOGIC_OP_BEGIN_RANGE: Enum_VkLogicOp =
-    Enum_VkLogicOp::VK_LOGIC_OP_CLEAR;
-pub const VK_LOGIC_OP_END_RANGE: Enum_VkLogicOp =
-    Enum_VkLogicOp::VK_LOGIC_OP_SET;
+pub const VK_LOGIC_OP_BEGIN_RANGE: VkLogicOp =
+    VkLogicOp::VK_LOGIC_OP_CLEAR;
+pub const VK_LOGIC_OP_END_RANGE: VkLogicOp =
+    VkLogicOp::VK_LOGIC_OP_SET;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkLogicOp {
+pub enum VkLogicOp {
     VK_LOGIC_OP_CLEAR = 0,
     VK_LOGIC_OP_AND = 1,
     VK_LOGIC_OP_AND_REVERSE = 2,
@@ -664,14 +646,13 @@ pub enum Enum_VkLogicOp {
     VK_LOGIC_OP_RANGE_SIZE = 16,
     VK_LOGIC_OP_MAX_ENUM = 2147483647,
 }
-pub type VkLogicOp = Enum_VkLogicOp;
-pub const VK_BLEND_FACTOR_BEGIN_RANGE: Enum_VkBlendFactor =
-    Enum_VkBlendFactor::VK_BLEND_FACTOR_ZERO;
-pub const VK_BLEND_FACTOR_END_RANGE: Enum_VkBlendFactor =
-    Enum_VkBlendFactor::VK_BLEND_FACTOR_ONE_MINUS_SRC1_ALPHA;
+pub const VK_BLEND_FACTOR_BEGIN_RANGE: VkBlendFactor =
+    VkBlendFactor::VK_BLEND_FACTOR_ZERO;
+pub const VK_BLEND_FACTOR_END_RANGE: VkBlendFactor =
+    VkBlendFactor::VK_BLEND_FACTOR_ONE_MINUS_SRC1_ALPHA;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkBlendFactor {
+pub enum VkBlendFactor {
     VK_BLEND_FACTOR_ZERO = 0,
     VK_BLEND_FACTOR_ONE = 1,
     VK_BLEND_FACTOR_SRC_COLOR = 2,
@@ -694,14 +675,13 @@ pub enum Enum_VkBlendFactor {
     VK_BLEND_FACTOR_RANGE_SIZE = 19,
     VK_BLEND_FACTOR_MAX_ENUM = 2147483647,
 }
-pub type VkBlendFactor = Enum_VkBlendFactor;
-pub const VK_BLEND_OP_BEGIN_RANGE: Enum_VkBlendOp =
-    Enum_VkBlendOp::VK_BLEND_OP_ADD;
-pub const VK_BLEND_OP_END_RANGE: Enum_VkBlendOp =
-    Enum_VkBlendOp::VK_BLEND_OP_MAX;
+pub const VK_BLEND_OP_BEGIN_RANGE: VkBlendOp =
+    VkBlendOp::VK_BLEND_OP_ADD;
+pub const VK_BLEND_OP_END_RANGE: VkBlendOp =
+    VkBlendOp::VK_BLEND_OP_MAX;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkBlendOp {
+pub enum VkBlendOp {
     VK_BLEND_OP_ADD = 0,
     VK_BLEND_OP_SUBTRACT = 1,
     VK_BLEND_OP_REVERSE_SUBTRACT = 2,
@@ -710,14 +690,13 @@ pub enum Enum_VkBlendOp {
     VK_BLEND_OP_RANGE_SIZE = 5,
     VK_BLEND_OP_MAX_ENUM = 2147483647,
 }
-pub type VkBlendOp = Enum_VkBlendOp;
-pub const VK_DYNAMIC_STATE_BEGIN_RANGE: Enum_VkDynamicState =
-    Enum_VkDynamicState::VK_DYNAMIC_STATE_VIEWPORT;
-pub const VK_DYNAMIC_STATE_END_RANGE: Enum_VkDynamicState =
-    Enum_VkDynamicState::VK_DYNAMIC_STATE_STENCIL_REFERENCE;
+pub const VK_DYNAMIC_STATE_BEGIN_RANGE: VkDynamicState =
+    VkDynamicState::VK_DYNAMIC_STATE_VIEWPORT;
+pub const VK_DYNAMIC_STATE_END_RANGE: VkDynamicState =
+    VkDynamicState::VK_DYNAMIC_STATE_STENCIL_REFERENCE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDynamicState {
+pub enum VkDynamicState {
     VK_DYNAMIC_STATE_VIEWPORT = 0,
     VK_DYNAMIC_STATE_SCISSOR = 1,
     VK_DYNAMIC_STATE_LINE_WIDTH = 2,
@@ -730,40 +709,37 @@ pub enum Enum_VkDynamicState {
     VK_DYNAMIC_STATE_RANGE_SIZE = 9,
     VK_DYNAMIC_STATE_MAX_ENUM = 2147483647,
 }
-pub type VkDynamicState = Enum_VkDynamicState;
-pub const VK_FILTER_BEGIN_RANGE: Enum_VkFilter =
-    Enum_VkFilter::VK_FILTER_NEAREST;
-pub const VK_FILTER_END_RANGE: Enum_VkFilter =
-    Enum_VkFilter::VK_FILTER_LINEAR;
+pub const VK_FILTER_BEGIN_RANGE: VkFilter =
+    VkFilter::VK_FILTER_NEAREST;
+pub const VK_FILTER_END_RANGE: VkFilter =
+    VkFilter::VK_FILTER_LINEAR;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkFilter {
+pub enum VkFilter {
     VK_FILTER_NEAREST = 0,
     VK_FILTER_LINEAR = 1,
     VK_FILTER_RANGE_SIZE = 2,
     VK_FILTER_MAX_ENUM = 2147483647,
 }
-pub type VkFilter = Enum_VkFilter;
-pub const VK_SAMPLER_MIPMAP_MODE_BEGIN_RANGE: Enum_VkSamplerMipmapMode =
-    Enum_VkSamplerMipmapMode::VK_SAMPLER_MIPMAP_MODE_NEAREST;
-pub const VK_SAMPLER_MIPMAP_MODE_END_RANGE: Enum_VkSamplerMipmapMode =
-    Enum_VkSamplerMipmapMode::VK_SAMPLER_MIPMAP_MODE_LINEAR;
+pub const VK_SAMPLER_MIPMAP_MODE_BEGIN_RANGE: VkSamplerMipmapMode =
+    VkSamplerMipmapMode::VK_SAMPLER_MIPMAP_MODE_NEAREST;
+pub const VK_SAMPLER_MIPMAP_MODE_END_RANGE: VkSamplerMipmapMode =
+    VkSamplerMipmapMode::VK_SAMPLER_MIPMAP_MODE_LINEAR;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSamplerMipmapMode {
+pub enum VkSamplerMipmapMode {
     VK_SAMPLER_MIPMAP_MODE_NEAREST = 0,
     VK_SAMPLER_MIPMAP_MODE_LINEAR = 1,
     VK_SAMPLER_MIPMAP_MODE_RANGE_SIZE = 2,
     VK_SAMPLER_MIPMAP_MODE_MAX_ENUM = 2147483647,
 }
-pub type VkSamplerMipmapMode = Enum_VkSamplerMipmapMode;
-pub const VK_SAMPLER_ADDRESS_MODE_BEGIN_RANGE: Enum_VkSamplerAddressMode =
-    Enum_VkSamplerAddressMode::VK_SAMPLER_ADDRESS_MODE_REPEAT;
-pub const VK_SAMPLER_ADDRESS_MODE_END_RANGE: Enum_VkSamplerAddressMode =
-    Enum_VkSamplerAddressMode::VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE;
+pub const VK_SAMPLER_ADDRESS_MODE_BEGIN_RANGE: VkSamplerAddressMode =
+    VkSamplerAddressMode::VK_SAMPLER_ADDRESS_MODE_REPEAT;
+pub const VK_SAMPLER_ADDRESS_MODE_END_RANGE: VkSamplerAddressMode =
+    VkSamplerAddressMode::VK_SAMPLER_ADDRESS_MODE_MIRROR_CLAMP_TO_EDGE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSamplerAddressMode {
+pub enum VkSamplerAddressMode {
     VK_SAMPLER_ADDRESS_MODE_REPEAT = 0,
     VK_SAMPLER_ADDRESS_MODE_MIRRORED_REPEAT = 1,
     VK_SAMPLER_ADDRESS_MODE_CLAMP_TO_EDGE = 2,
@@ -772,14 +748,13 @@ pub enum Enum_VkSamplerAddressMode {
     VK_SAMPLER_ADDRESS_MODE_RANGE_SIZE = 5,
     VK_SAMPLER_ADDRESS_MODE_MAX_ENUM = 2147483647,
 }
-pub type VkSamplerAddressMode = Enum_VkSamplerAddressMode;
-pub const VK_BORDER_COLOR_BEGIN_RANGE: Enum_VkBorderColor =
-    Enum_VkBorderColor::VK_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK;
-pub const VK_BORDER_COLOR_END_RANGE: Enum_VkBorderColor =
-    Enum_VkBorderColor::VK_BORDER_COLOR_INT_OPAQUE_WHITE;
+pub const VK_BORDER_COLOR_BEGIN_RANGE: VkBorderColor =
+    VkBorderColor::VK_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK;
+pub const VK_BORDER_COLOR_END_RANGE: VkBorderColor =
+    VkBorderColor::VK_BORDER_COLOR_INT_OPAQUE_WHITE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkBorderColor {
+pub enum VkBorderColor {
     VK_BORDER_COLOR_FLOAT_TRANSPARENT_BLACK = 0,
     VK_BORDER_COLOR_INT_TRANSPARENT_BLACK = 1,
     VK_BORDER_COLOR_FLOAT_OPAQUE_BLACK = 2,
@@ -789,14 +764,13 @@ pub enum Enum_VkBorderColor {
     VK_BORDER_COLOR_RANGE_SIZE = 6,
     VK_BORDER_COLOR_MAX_ENUM = 2147483647,
 }
-pub type VkBorderColor = Enum_VkBorderColor;
-pub const VK_DESCRIPTOR_TYPE_BEGIN_RANGE: Enum_VkDescriptorType =
-    Enum_VkDescriptorType::VK_DESCRIPTOR_TYPE_SAMPLER;
-pub const VK_DESCRIPTOR_TYPE_END_RANGE: Enum_VkDescriptorType =
-    Enum_VkDescriptorType::VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT;
+pub const VK_DESCRIPTOR_TYPE_BEGIN_RANGE: VkDescriptorType =
+    VkDescriptorType::VK_DESCRIPTOR_TYPE_SAMPLER;
+pub const VK_DESCRIPTOR_TYPE_END_RANGE: VkDescriptorType =
+    VkDescriptorType::VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDescriptorType {
+pub enum VkDescriptorType {
     VK_DESCRIPTOR_TYPE_SAMPLER = 0,
     VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER = 1,
     VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE = 2,
@@ -811,90 +785,83 @@ pub enum Enum_VkDescriptorType {
     VK_DESCRIPTOR_TYPE_RANGE_SIZE = 11,
     VK_DESCRIPTOR_TYPE_MAX_ENUM = 2147483647,
 }
-pub type VkDescriptorType = Enum_VkDescriptorType;
-pub const VK_ATTACHMENT_LOAD_OP_BEGIN_RANGE: Enum_VkAttachmentLoadOp =
-    Enum_VkAttachmentLoadOp::VK_ATTACHMENT_LOAD_OP_LOAD;
-pub const VK_ATTACHMENT_LOAD_OP_END_RANGE: Enum_VkAttachmentLoadOp =
-    Enum_VkAttachmentLoadOp::VK_ATTACHMENT_LOAD_OP_DONT_CARE;
+pub const VK_ATTACHMENT_LOAD_OP_BEGIN_RANGE: VkAttachmentLoadOp =
+    VkAttachmentLoadOp::VK_ATTACHMENT_LOAD_OP_LOAD;
+pub const VK_ATTACHMENT_LOAD_OP_END_RANGE: VkAttachmentLoadOp =
+    VkAttachmentLoadOp::VK_ATTACHMENT_LOAD_OP_DONT_CARE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkAttachmentLoadOp {
+pub enum VkAttachmentLoadOp {
     VK_ATTACHMENT_LOAD_OP_LOAD = 0,
     VK_ATTACHMENT_LOAD_OP_CLEAR = 1,
     VK_ATTACHMENT_LOAD_OP_DONT_CARE = 2,
     VK_ATTACHMENT_LOAD_OP_RANGE_SIZE = 3,
     VK_ATTACHMENT_LOAD_OP_MAX_ENUM = 2147483647,
 }
-pub type VkAttachmentLoadOp = Enum_VkAttachmentLoadOp;
-pub const VK_ATTACHMENT_STORE_OP_BEGIN_RANGE: Enum_VkAttachmentStoreOp =
-    Enum_VkAttachmentStoreOp::VK_ATTACHMENT_STORE_OP_STORE;
-pub const VK_ATTACHMENT_STORE_OP_END_RANGE: Enum_VkAttachmentStoreOp =
-    Enum_VkAttachmentStoreOp::VK_ATTACHMENT_STORE_OP_DONT_CARE;
+pub const VK_ATTACHMENT_STORE_OP_BEGIN_RANGE: VkAttachmentStoreOp =
+    VkAttachmentStoreOp::VK_ATTACHMENT_STORE_OP_STORE;
+pub const VK_ATTACHMENT_STORE_OP_END_RANGE: VkAttachmentStoreOp =
+    VkAttachmentStoreOp::VK_ATTACHMENT_STORE_OP_DONT_CARE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkAttachmentStoreOp {
+pub enum VkAttachmentStoreOp {
     VK_ATTACHMENT_STORE_OP_STORE = 0,
     VK_ATTACHMENT_STORE_OP_DONT_CARE = 1,
     VK_ATTACHMENT_STORE_OP_RANGE_SIZE = 2,
     VK_ATTACHMENT_STORE_OP_MAX_ENUM = 2147483647,
 }
-pub type VkAttachmentStoreOp = Enum_VkAttachmentStoreOp;
-pub const VK_PIPELINE_BIND_POINT_BEGIN_RANGE: Enum_VkPipelineBindPoint =
-    Enum_VkPipelineBindPoint::VK_PIPELINE_BIND_POINT_GRAPHICS;
-pub const VK_PIPELINE_BIND_POINT_END_RANGE: Enum_VkPipelineBindPoint =
-    Enum_VkPipelineBindPoint::VK_PIPELINE_BIND_POINT_COMPUTE;
+pub const VK_PIPELINE_BIND_POINT_BEGIN_RANGE: VkPipelineBindPoint =
+    VkPipelineBindPoint::VK_PIPELINE_BIND_POINT_GRAPHICS;
+pub const VK_PIPELINE_BIND_POINT_END_RANGE: VkPipelineBindPoint =
+    VkPipelineBindPoint::VK_PIPELINE_BIND_POINT_COMPUTE;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPipelineBindPoint {
+pub enum VkPipelineBindPoint {
     VK_PIPELINE_BIND_POINT_GRAPHICS = 0,
     VK_PIPELINE_BIND_POINT_COMPUTE = 1,
     VK_PIPELINE_BIND_POINT_RANGE_SIZE = 2,
     VK_PIPELINE_BIND_POINT_MAX_ENUM = 2147483647,
 }
-pub type VkPipelineBindPoint = Enum_VkPipelineBindPoint;
-pub const VK_COMMAND_BUFFER_LEVEL_BEGIN_RANGE: Enum_VkCommandBufferLevel =
-    Enum_VkCommandBufferLevel::VK_COMMAND_BUFFER_LEVEL_PRIMARY;
-pub const VK_COMMAND_BUFFER_LEVEL_END_RANGE: Enum_VkCommandBufferLevel =
-    Enum_VkCommandBufferLevel::VK_COMMAND_BUFFER_LEVEL_SECONDARY;
+pub const VK_COMMAND_BUFFER_LEVEL_BEGIN_RANGE: VkCommandBufferLevel =
+    VkCommandBufferLevel::VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+pub const VK_COMMAND_BUFFER_LEVEL_END_RANGE: VkCommandBufferLevel =
+    VkCommandBufferLevel::VK_COMMAND_BUFFER_LEVEL_SECONDARY;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCommandBufferLevel {
+pub enum VkCommandBufferLevel {
     VK_COMMAND_BUFFER_LEVEL_PRIMARY = 0,
     VK_COMMAND_BUFFER_LEVEL_SECONDARY = 1,
     VK_COMMAND_BUFFER_LEVEL_RANGE_SIZE = 2,
     VK_COMMAND_BUFFER_LEVEL_MAX_ENUM = 2147483647,
 }
-pub type VkCommandBufferLevel = Enum_VkCommandBufferLevel;
-pub const VK_INDEX_TYPE_BEGIN_RANGE: Enum_VkIndexType =
-    Enum_VkIndexType::VK_INDEX_TYPE_UINT16;
-pub const VK_INDEX_TYPE_END_RANGE: Enum_VkIndexType =
-    Enum_VkIndexType::VK_INDEX_TYPE_UINT32;
+pub const VK_INDEX_TYPE_BEGIN_RANGE: VkIndexType =
+    VkIndexType::VK_INDEX_TYPE_UINT16;
+pub const VK_INDEX_TYPE_END_RANGE: VkIndexType =
+    VkIndexType::VK_INDEX_TYPE_UINT32;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkIndexType {
+pub enum VkIndexType {
     VK_INDEX_TYPE_UINT16 = 0,
     VK_INDEX_TYPE_UINT32 = 1,
     VK_INDEX_TYPE_RANGE_SIZE = 2,
     VK_INDEX_TYPE_MAX_ENUM = 2147483647,
 }
-pub type VkIndexType = Enum_VkIndexType;
-pub const VK_SUBPASS_CONTENTS_BEGIN_RANGE: Enum_VkSubpassContents =
-    Enum_VkSubpassContents::VK_SUBPASS_CONTENTS_INLINE;
-pub const VK_SUBPASS_CONTENTS_END_RANGE: Enum_VkSubpassContents =
-    Enum_VkSubpassContents::VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS;
+pub const VK_SUBPASS_CONTENTS_BEGIN_RANGE: VkSubpassContents =
+    VkSubpassContents::VK_SUBPASS_CONTENTS_INLINE;
+pub const VK_SUBPASS_CONTENTS_END_RANGE: VkSubpassContents =
+    VkSubpassContents::VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSubpassContents {
+pub enum VkSubpassContents {
     VK_SUBPASS_CONTENTS_INLINE = 0,
     VK_SUBPASS_CONTENTS_SECONDARY_COMMAND_BUFFERS = 1,
     VK_SUBPASS_CONTENTS_RANGE_SIZE = 2,
     VK_SUBPASS_CONTENTS_MAX_ENUM = 2147483647,
 }
-pub type VkSubpassContents = Enum_VkSubpassContents;
 pub type VkInstanceCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkFormatFeatureFlagBits {
+pub enum VkFormatFeatureFlagBits {
     VK_FORMAT_FEATURE_SAMPLED_IMAGE_BIT = 1,
     VK_FORMAT_FEATURE_STORAGE_IMAGE_BIT = 2,
     VK_FORMAT_FEATURE_STORAGE_IMAGE_ATOMIC_BIT = 4,
@@ -909,11 +876,10 @@ pub enum Enum_VkFormatFeatureFlagBits {
     VK_FORMAT_FEATURE_BLIT_DST_BIT = 2048,
     VK_FORMAT_FEATURE_SAMPLED_IMAGE_FILTER_LINEAR_BIT = 4096,
 }
-pub type VkFormatFeatureFlagBits = Enum_VkFormatFeatureFlagBits;
 pub type VkFormatFeatureFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkImageUsageFlagBits {
+pub enum VkImageUsageFlagBits {
     VK_IMAGE_USAGE_TRANSFER_SRC_BIT = 1,
     VK_IMAGE_USAGE_TRANSFER_DST_BIT = 2,
     VK_IMAGE_USAGE_SAMPLED_BIT = 4,
@@ -923,22 +889,20 @@ pub enum Enum_VkImageUsageFlagBits {
     VK_IMAGE_USAGE_TRANSIENT_ATTACHMENT_BIT = 64,
     VK_IMAGE_USAGE_INPUT_ATTACHMENT_BIT = 128,
 }
-pub type VkImageUsageFlagBits = Enum_VkImageUsageFlagBits;
 pub type VkImageUsageFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkImageCreateFlagBits {
+pub enum VkImageCreateFlagBits {
     VK_IMAGE_CREATE_SPARSE_BINDING_BIT = 1,
     VK_IMAGE_CREATE_SPARSE_RESIDENCY_BIT = 2,
     VK_IMAGE_CREATE_SPARSE_ALIASED_BIT = 4,
     VK_IMAGE_CREATE_MUTABLE_FORMAT_BIT = 8,
     VK_IMAGE_CREATE_CUBE_COMPATIBLE_BIT = 16,
 }
-pub type VkImageCreateFlagBits = Enum_VkImageCreateFlagBits;
 pub type VkImageCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSampleCountFlagBits {
+pub enum VkSampleCountFlagBits {
     VK_SAMPLE_COUNT_1_BIT = 1,
     VK_SAMPLE_COUNT_2_BIT = 2,
     VK_SAMPLE_COUNT_4_BIT = 4,
@@ -947,39 +911,35 @@ pub enum Enum_VkSampleCountFlagBits {
     VK_SAMPLE_COUNT_32_BIT = 32,
     VK_SAMPLE_COUNT_64_BIT = 64,
 }
-pub type VkSampleCountFlagBits = Enum_VkSampleCountFlagBits;
 pub type VkSampleCountFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkQueueFlagBits {
+pub enum VkQueueFlagBits {
     VK_QUEUE_GRAPHICS_BIT = 1,
     VK_QUEUE_COMPUTE_BIT = 2,
     VK_QUEUE_TRANSFER_BIT = 4,
     VK_QUEUE_SPARSE_BINDING_BIT = 8,
 }
-pub type VkQueueFlagBits = Enum_VkQueueFlagBits;
 pub type VkQueueFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkMemoryPropertyFlagBits {
+pub enum VkMemoryPropertyFlagBits {
     VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT = 1,
     VK_MEMORY_PROPERTY_HOST_VISIBLE_BIT = 2,
     VK_MEMORY_PROPERTY_HOST_COHERENT_BIT = 4,
     VK_MEMORY_PROPERTY_HOST_CACHED_BIT = 8,
     VK_MEMORY_PROPERTY_LAZILY_ALLOCATED_BIT = 16,
 }
-pub type VkMemoryPropertyFlagBits = Enum_VkMemoryPropertyFlagBits;
 pub type VkMemoryPropertyFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkMemoryHeapFlagBits { VK_MEMORY_HEAP_DEVICE_LOCAL_BIT = 1, }
-pub type VkMemoryHeapFlagBits = Enum_VkMemoryHeapFlagBits;
+pub enum VkMemoryHeapFlagBits { VK_MEMORY_HEAP_DEVICE_LOCAL_BIT = 1, }
 pub type VkMemoryHeapFlags = VkFlags;
 pub type VkDeviceCreateFlags = VkFlags;
 pub type VkDeviceQueueCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPipelineStageFlagBits {
+pub enum VkPipelineStageFlagBits {
     VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT = 1,
     VK_PIPELINE_STAGE_DRAW_INDIRECT_BIT = 2,
     VK_PIPELINE_STAGE_VERTEX_INPUT_BIT = 4,
@@ -998,46 +958,41 @@ pub enum Enum_VkPipelineStageFlagBits {
     VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT = 32768,
     VK_PIPELINE_STAGE_ALL_COMMANDS_BIT = 65536,
 }
-pub type VkPipelineStageFlagBits = Enum_VkPipelineStageFlagBits;
 pub type VkPipelineStageFlags = VkFlags;
 pub type VkMemoryMapFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkImageAspectFlagBits {
+pub enum VkImageAspectFlagBits {
     VK_IMAGE_ASPECT_COLOR_BIT = 1,
     VK_IMAGE_ASPECT_DEPTH_BIT = 2,
     VK_IMAGE_ASPECT_STENCIL_BIT = 4,
     VK_IMAGE_ASPECT_METADATA_BIT = 8,
 }
-pub type VkImageAspectFlagBits = Enum_VkImageAspectFlagBits;
 pub type VkImageAspectFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSparseImageFormatFlagBits {
+pub enum VkSparseImageFormatFlagBits {
     VK_SPARSE_IMAGE_FORMAT_SINGLE_MIPTAIL_BIT = 1,
     VK_SPARSE_IMAGE_FORMAT_ALIGNED_MIP_SIZE_BIT = 2,
     VK_SPARSE_IMAGE_FORMAT_NONSTANDARD_BLOCK_SIZE_BIT = 4,
 }
-pub type VkSparseImageFormatFlagBits = Enum_VkSparseImageFormatFlagBits;
 pub type VkSparseImageFormatFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSparseMemoryBindFlagBits {
+pub enum VkSparseMemoryBindFlagBits {
     VK_SPARSE_MEMORY_BIND_METADATA_BIT = 1,
 }
-pub type VkSparseMemoryBindFlagBits = Enum_VkSparseMemoryBindFlagBits;
 pub type VkSparseMemoryBindFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkFenceCreateFlagBits { VK_FENCE_CREATE_SIGNALED_BIT = 1, }
-pub type VkFenceCreateFlagBits = Enum_VkFenceCreateFlagBits;
+pub enum VkFenceCreateFlagBits { VK_FENCE_CREATE_SIGNALED_BIT = 1, }
 pub type VkFenceCreateFlags = VkFlags;
 pub type VkSemaphoreCreateFlags = VkFlags;
 pub type VkEventCreateFlags = VkFlags;
 pub type VkQueryPoolCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkQueryPipelineStatisticFlagBits {
+pub enum VkQueryPipelineStatisticFlagBits {
     VK_QUERY_PIPELINE_STATISTIC_INPUT_ASSEMBLY_VERTICES_BIT = 1,
     VK_QUERY_PIPELINE_STATISTIC_INPUT_ASSEMBLY_PRIMITIVES_BIT = 2,
     VK_QUERY_PIPELINE_STATISTIC_VERTEX_SHADER_INVOCATIONS_BIT = 4,
@@ -1051,31 +1006,27 @@ pub enum Enum_VkQueryPipelineStatisticFlagBits {
         = 512,
     VK_QUERY_PIPELINE_STATISTIC_COMPUTE_SHADER_INVOCATIONS_BIT = 1024,
 }
-pub type VkQueryPipelineStatisticFlagBits =
-    Enum_VkQueryPipelineStatisticFlagBits;
 pub type VkQueryPipelineStatisticFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkQueryResultFlagBits {
+pub enum VkQueryResultFlagBits {
     VK_QUERY_RESULT_64_BIT = 1,
     VK_QUERY_RESULT_WAIT_BIT = 2,
     VK_QUERY_RESULT_WITH_AVAILABILITY_BIT = 4,
     VK_QUERY_RESULT_PARTIAL_BIT = 8,
 }
-pub type VkQueryResultFlagBits = Enum_VkQueryResultFlagBits;
 pub type VkQueryResultFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkBufferCreateFlagBits {
+pub enum VkBufferCreateFlagBits {
     VK_BUFFER_CREATE_SPARSE_BINDING_BIT = 1,
     VK_BUFFER_CREATE_SPARSE_RESIDENCY_BIT = 2,
     VK_BUFFER_CREATE_SPARSE_ALIASED_BIT = 4,
 }
-pub type VkBufferCreateFlagBits = Enum_VkBufferCreateFlagBits;
 pub type VkBufferCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkBufferUsageFlagBits {
+pub enum VkBufferUsageFlagBits {
     VK_BUFFER_USAGE_TRANSFER_SRC_BIT = 1,
     VK_BUFFER_USAGE_TRANSFER_DST_BIT = 2,
     VK_BUFFER_USAGE_UNIFORM_TEXEL_BUFFER_BIT = 4,
@@ -1086,7 +1037,6 @@ pub enum Enum_VkBufferUsageFlagBits {
     VK_BUFFER_USAGE_VERTEX_BUFFER_BIT = 128,
     VK_BUFFER_USAGE_INDIRECT_BUFFER_BIT = 256,
 }
-pub type VkBufferUsageFlagBits = Enum_VkBufferUsageFlagBits;
 pub type VkBufferUsageFlags = VkFlags;
 pub type VkBufferViewCreateFlags = VkFlags;
 pub type VkImageViewCreateFlags = VkFlags;
@@ -1094,17 +1044,16 @@ pub type VkShaderModuleCreateFlags = VkFlags;
 pub type VkPipelineCacheCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPipelineCreateFlagBits {
+pub enum VkPipelineCreateFlagBits {
     VK_PIPELINE_CREATE_DISABLE_OPTIMIZATION_BIT = 1,
     VK_PIPELINE_CREATE_ALLOW_DERIVATIVES_BIT = 2,
     VK_PIPELINE_CREATE_DERIVATIVE_BIT = 4,
 }
-pub type VkPipelineCreateFlagBits = Enum_VkPipelineCreateFlagBits;
 pub type VkPipelineCreateFlags = VkFlags;
 pub type VkPipelineShaderStageCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkShaderStageFlagBits {
+pub enum VkShaderStageFlagBits {
     VK_SHADER_STAGE_VERTEX_BIT = 1,
     VK_SHADER_STAGE_TESSELLATION_CONTROL_BIT = 2,
     VK_SHADER_STAGE_TESSELLATION_EVALUATION_BIT = 4,
@@ -1114,7 +1063,6 @@ pub enum Enum_VkShaderStageFlagBits {
     VK_SHADER_STAGE_ALL_GRAPHICS = 31,
     VK_SHADER_STAGE_ALL = 2147483647,
 }
-pub type VkShaderStageFlagBits = Enum_VkShaderStageFlagBits;
 pub type VkPipelineVertexInputStateCreateFlags = VkFlags;
 pub type VkPipelineInputAssemblyStateCreateFlags = VkFlags;
 pub type VkPipelineTessellationStateCreateFlags = VkFlags;
@@ -1122,26 +1070,24 @@ pub type VkPipelineViewportStateCreateFlags = VkFlags;
 pub type VkPipelineRasterizationStateCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCullModeFlagBits {
+pub enum VkCullModeFlagBits {
     VK_CULL_MODE_NONE = 0,
     VK_CULL_MODE_FRONT_BIT = 1,
     VK_CULL_MODE_BACK_BIT = 2,
     VK_CULL_MODE_FRONT_AND_BACK = 3,
 }
-pub type VkCullModeFlagBits = Enum_VkCullModeFlagBits;
 pub type VkCullModeFlags = VkFlags;
 pub type VkPipelineMultisampleStateCreateFlags = VkFlags;
 pub type VkPipelineDepthStencilStateCreateFlags = VkFlags;
 pub type VkPipelineColorBlendStateCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkColorComponentFlagBits {
+pub enum VkColorComponentFlagBits {
     VK_COLOR_COMPONENT_R_BIT = 1,
     VK_COLOR_COMPONENT_G_BIT = 2,
     VK_COLOR_COMPONENT_B_BIT = 4,
     VK_COLOR_COMPONENT_A_BIT = 8,
 }
-pub type VkColorComponentFlagBits = Enum_VkColorComponentFlagBits;
 pub type VkColorComponentFlags = VkFlags;
 pub type VkPipelineDynamicStateCreateFlags = VkFlags;
 pub type VkPipelineLayoutCreateFlags = VkFlags;
@@ -1150,26 +1096,23 @@ pub type VkSamplerCreateFlags = VkFlags;
 pub type VkDescriptorSetLayoutCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDescriptorPoolCreateFlagBits {
+pub enum VkDescriptorPoolCreateFlagBits {
     VK_DESCRIPTOR_POOL_CREATE_FREE_DESCRIPTOR_SET_BIT = 1,
 }
-pub type VkDescriptorPoolCreateFlagBits = Enum_VkDescriptorPoolCreateFlagBits;
 pub type VkDescriptorPoolCreateFlags = VkFlags;
 pub type VkDescriptorPoolResetFlags = VkFlags;
 pub type VkFramebufferCreateFlags = VkFlags;
 pub type VkRenderPassCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkAttachmentDescriptionFlagBits {
+pub enum VkAttachmentDescriptionFlagBits {
     VK_ATTACHMENT_DESCRIPTION_MAY_ALIAS_BIT = 1,
 }
-pub type VkAttachmentDescriptionFlagBits =
-    Enum_VkAttachmentDescriptionFlagBits;
 pub type VkAttachmentDescriptionFlags = VkFlags;
 pub type VkSubpassDescriptionFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkAccessFlagBits {
+pub enum VkAccessFlagBits {
     VK_ACCESS_INDIRECT_COMMAND_READ_BIT = 1,
     VK_ACCESS_INDEX_READ_BIT = 2,
     VK_ACCESS_VERTEX_ATTRIBUTE_READ_BIT = 4,
@@ -1188,57 +1131,49 @@ pub enum Enum_VkAccessFlagBits {
     VK_ACCESS_MEMORY_READ_BIT = 32768,
     VK_ACCESS_MEMORY_WRITE_BIT = 65536,
 }
-pub type VkAccessFlagBits = Enum_VkAccessFlagBits;
 pub type VkAccessFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDependencyFlagBits { VK_DEPENDENCY_BY_REGION_BIT = 1, }
-pub type VkDependencyFlagBits = Enum_VkDependencyFlagBits;
+pub enum VkDependencyFlagBits { VK_DEPENDENCY_BY_REGION_BIT = 1, }
 pub type VkDependencyFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCommandPoolCreateFlagBits {
+pub enum VkCommandPoolCreateFlagBits {
     VK_COMMAND_POOL_CREATE_TRANSIENT_BIT = 1,
     VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT = 2,
 }
-pub type VkCommandPoolCreateFlagBits = Enum_VkCommandPoolCreateFlagBits;
 pub type VkCommandPoolCreateFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCommandPoolResetFlagBits {
+pub enum VkCommandPoolResetFlagBits {
     VK_COMMAND_POOL_RESET_RELEASE_RESOURCES_BIT = 1,
 }
-pub type VkCommandPoolResetFlagBits = Enum_VkCommandPoolResetFlagBits;
 pub type VkCommandPoolResetFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCommandBufferUsageFlagBits {
+pub enum VkCommandBufferUsageFlagBits {
     VK_COMMAND_BUFFER_USAGE_ONE_TIME_SUBMIT_BIT = 1,
     VK_COMMAND_BUFFER_USAGE_RENDER_PASS_CONTINUE_BIT = 2,
     VK_COMMAND_BUFFER_USAGE_SIMULTANEOUS_USE_BIT = 4,
 }
-pub type VkCommandBufferUsageFlagBits = Enum_VkCommandBufferUsageFlagBits;
 pub type VkCommandBufferUsageFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkQueryControlFlagBits { VK_QUERY_CONTROL_PRECISE_BIT = 1, }
-pub type VkQueryControlFlagBits = Enum_VkQueryControlFlagBits;
+pub enum VkQueryControlFlagBits { VK_QUERY_CONTROL_PRECISE_BIT = 1, }
 pub type VkQueryControlFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCommandBufferResetFlagBits {
+pub enum VkCommandBufferResetFlagBits {
     VK_COMMAND_BUFFER_RESET_RELEASE_RESOURCES_BIT = 1,
 }
-pub type VkCommandBufferResetFlagBits = Enum_VkCommandBufferResetFlagBits;
 pub type VkCommandBufferResetFlags = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkStencilFaceFlagBits {
+pub enum VkStencilFaceFlagBits {
     VK_STENCIL_FACE_FRONT_BIT = 1,
     VK_STENCIL_FACE_BACK_BIT = 2,
     VK_STENCIL_FRONT_AND_BACK = 3,
 }
-pub type VkStencilFaceFlagBits = Enum_VkStencilFaceFlagBits;
 pub type VkStencilFaceFlags = VkFlags;
 pub type PFN_vkAllocationFunction =
     ::std::option::Option<unsafe extern "system" fn(pUserData:
@@ -4130,25 +4065,24 @@ pub type PFN_vkCmdExecuteCommands =
                                                    *const VkCommandBuffer)>;
 pub enum Struct_VkSurfaceKHR_T { }
 pub type VkSurfaceKHR = *mut Struct_VkSurfaceKHR_T;
-pub const VK_COLORSPACE_BEGIN_RANGE: Enum_VkColorSpaceKHR =
-    Enum_VkColorSpaceKHR::VK_COLORSPACE_SRGB_NONLINEAR_KHR;
-pub const VK_COLORSPACE_END_RANGE: Enum_VkColorSpaceKHR =
-    Enum_VkColorSpaceKHR::VK_COLORSPACE_SRGB_NONLINEAR_KHR;
+pub const VK_COLORSPACE_BEGIN_RANGE: VkColorSpaceKHR =
+    VkColorSpaceKHR::VK_COLORSPACE_SRGB_NONLINEAR_KHR;
+pub const VK_COLORSPACE_END_RANGE: VkColorSpaceKHR =
+    VkColorSpaceKHR::VK_COLORSPACE_SRGB_NONLINEAR_KHR;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkColorSpaceKHR {
+pub enum VkColorSpaceKHR {
     VK_COLORSPACE_SRGB_NONLINEAR_KHR = 0,
     VK_COLORSPACE_RANGE_SIZE = 1,
     VK_COLORSPACE_MAX_ENUM = 2147483647,
 }
-pub type VkColorSpaceKHR = Enum_VkColorSpaceKHR;
-pub const VK_PRESENT_MODE_BEGIN_RANGE: Enum_VkPresentModeKHR =
-    Enum_VkPresentModeKHR::VK_PRESENT_MODE_IMMEDIATE_KHR;
-pub const VK_PRESENT_MODE_END_RANGE: Enum_VkPresentModeKHR =
-    Enum_VkPresentModeKHR::VK_PRESENT_MODE_FIFO_RELAXED_KHR;
+pub const VK_PRESENT_MODE_BEGIN_RANGE: VkPresentModeKHR =
+    VkPresentModeKHR::VK_PRESENT_MODE_IMMEDIATE_KHR;
+pub const VK_PRESENT_MODE_END_RANGE: VkPresentModeKHR =
+    VkPresentModeKHR::VK_PRESENT_MODE_FIFO_RELAXED_KHR;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkPresentModeKHR {
+pub enum VkPresentModeKHR {
     VK_PRESENT_MODE_IMMEDIATE_KHR = 0,
     VK_PRESENT_MODE_MAILBOX_KHR = 1,
     VK_PRESENT_MODE_FIFO_KHR = 2,
@@ -4156,10 +4090,9 @@ pub enum Enum_VkPresentModeKHR {
     VK_PRESENT_MODE_RANGE_SIZE = 4,
     VK_PRESENT_MODE_MAX_ENUM = 2147483647,
 }
-pub type VkPresentModeKHR = Enum_VkPresentModeKHR;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkSurfaceTransformFlagBitsKHR {
+pub enum VkSurfaceTransformFlagBitsKHR {
     VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR = 1,
     VK_SURFACE_TRANSFORM_ROTATE_90_BIT_KHR = 2,
     VK_SURFACE_TRANSFORM_ROTATE_180_BIT_KHR = 4,
@@ -4170,17 +4103,15 @@ pub enum Enum_VkSurfaceTransformFlagBitsKHR {
     VK_SURFACE_TRANSFORM_HORIZONTAL_MIRROR_ROTATE_270_BIT_KHR = 128,
     VK_SURFACE_TRANSFORM_INHERIT_BIT_KHR = 256,
 }
-pub type VkSurfaceTransformFlagBitsKHR = Enum_VkSurfaceTransformFlagBitsKHR;
 pub type VkSurfaceTransformFlagsKHR = VkFlags;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkCompositeAlphaFlagBitsKHR {
+pub enum VkCompositeAlphaFlagBitsKHR {
     VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR = 1,
     VK_COMPOSITE_ALPHA_PRE_MULTIPLIED_BIT_KHR = 2,
     VK_COMPOSITE_ALPHA_POST_MULTIPLIED_BIT_KHR = 4,
     VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR = 8,
 }
-pub type VkCompositeAlphaFlagBitsKHR = Enum_VkCompositeAlphaFlagBitsKHR;
 pub type VkCompositeAlphaFlagsKHR = VkFlags;
 #[repr(C)]
 #[derive(Copy)]
@@ -4344,13 +4275,12 @@ pub enum Struct_VkDisplayModeKHR_T { }
 pub type VkDisplayModeKHR = *mut Struct_VkDisplayModeKHR_T;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDisplayPlaneAlphaFlagBitsKHR {
+pub enum VkDisplayPlaneAlphaFlagBitsKHR {
     VK_DISPLAY_PLANE_ALPHA_OPAQUE_BIT_KHR = 1,
     VK_DISPLAY_PLANE_ALPHA_GLOBAL_BIT_KHR = 2,
     VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_BIT_KHR = 4,
     VK_DISPLAY_PLANE_ALPHA_PER_PIXEL_PREMULTIPLIED_BIT_KHR = 8,
 }
-pub type VkDisplayPlaneAlphaFlagBitsKHR = Enum_VkDisplayPlaneAlphaFlagBitsKHR;
 pub type VkDisplayModeCreateFlagsKHR = VkFlags;
 pub type VkDisplayPlaneAlphaFlagsKHR = VkFlags;
 pub type VkDisplaySurfaceCreateFlagsKHR = VkFlags;
@@ -4552,7 +4482,7 @@ pub enum Struct_VkDebugReportCallbackEXT_T { }
 pub type VkDebugReportCallbackEXT = *mut Struct_VkDebugReportCallbackEXT_T;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDebugReportObjectTypeEXT {
+pub enum VkDebugReportObjectTypeEXT {
     VK_DEBUG_REPORT_OBJECT_TYPE_UNKNOWN_EXT = 0,
     VK_DEBUG_REPORT_OBJECT_TYPE_INSTANCE_EXT = 1,
     VK_DEBUG_REPORT_OBJECT_TYPE_PHYSICAL_DEVICE_EXT = 2,
@@ -4583,24 +4513,21 @@ pub enum Enum_VkDebugReportObjectTypeEXT {
     VK_DEBUG_REPORT_OBJECT_TYPE_SWAPCHAIN_KHR_EXT = 27,
     VK_DEBUG_REPORT_OBJECT_TYPE_DEBUG_REPORT_EXT = 28,
 }
-pub type VkDebugReportObjectTypeEXT = Enum_VkDebugReportObjectTypeEXT;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDebugReportErrorEXT {
+pub enum VkDebugReportErrorEXT {
     VK_DEBUG_REPORT_ERROR_NONE_EXT = 0,
     VK_DEBUG_REPORT_ERROR_CALLBACK_REF_EXT = 1,
 }
-pub type VkDebugReportErrorEXT = Enum_VkDebugReportErrorEXT;
 #[derive(Clone, Copy)]
 #[repr(u32)]
-pub enum Enum_VkDebugReportFlagBitsEXT {
+pub enum VkDebugReportFlagBitsEXT {
     VK_DEBUG_REPORT_INFORMATION_BIT_EXT = 1,
     VK_DEBUG_REPORT_WARNING_BIT_EXT = 2,
     VK_DEBUG_REPORT_PERFORMANCE_WARNING_BIT_EXT = 4,
     VK_DEBUG_REPORT_ERROR_BIT_EXT = 8,
     VK_DEBUG_REPORT_DEBUG_BIT_EXT = 16,
 }
-pub type VkDebugReportFlagBitsEXT = Enum_VkDebugReportFlagBitsEXT;
 pub type VkDebugReportFlagsEXT = VkFlags;
 pub type PFN_vkDebugReportCallbackEXT =
     ::std::option::Option<unsafe extern "system" fn(flags: VkDebugReportFlagsEXT,

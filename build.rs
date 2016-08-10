@@ -17,6 +17,6 @@ fn main() {
   }else{
     "Source/lib"
   };
-  println!("cargo:rustc-link-search={}/{}",vk_path,folder);
+  println!("cargo:rustc-link-search=native={}/{}",vk_path,folder);
   println!("cargo:rustc-link-lib=static=vulkan-1");
 }
